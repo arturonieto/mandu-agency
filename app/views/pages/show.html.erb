@@ -1,0 +1,14 @@
+<div class="render">
+	<div class="container">
+		<%= image_tag(@render.image) %>
+		<% if @type == 'exterior' %>
+		<%= link_to 'REGRESAR', {controller: 'pages', action: 'see', link: :portafolio, type: :exterior} %>
+		<% elsif @type == 'interior' %>
+		<%= link_to 'REGRESAR', {controller: 'pages', action: 'see', link: :portafolio, type: :interior} %>
+		<% elsif @type == 'foto' %>
+		<%= link_to 'REGRESAR', {controller: 'pages', action: 'see', link: :portafolio, type: :foto} %>
+		<% elsif @type == 'industrial' %>
+		<%= link_to 'REGRESAR', {controller: 'pages', action: 'see', link: :portafolio, type: :industrial} %>
+		<% end %>
+	</div>
+</div>

@@ -1,0 +1,94 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+html, body{
+	margin: 0;
+	background-color: black;
+}
+
+p, li, h1, h3, h2, h4, a{
+	font-family: 'raleway';
+	font-weight: 200;
+	color: white;
+}
+
+/*HEADER*/
+
+.header .nav_bar a{
+	text-decoration: none;
+}
+
+.header .nav_bar img{
+	width: 150px;
+	height: auto;
+	margin: 0;
+	margin-top: .8em;
+	padding: 0;
+	display: none;
+}
+
+.header .nav_bar ul li{
+	font-size: 1.2em;
+	display: inline-block;
+	color: white;
+	font-weight: 100;
+	padding: 1.5em 0 0 15px;
+}
+
+.header .nav_bar ul a li.active{
+	color: dodgerblue;
+}
+
+/*FOOTER*/
+
+.footer{
+	position: fixed;
+	width: 100%;
+	bottom: 0;
+	color: white;
+	background-color: black;
+	font-family: 'raleway', sans-serif;
+	font-weight: 200;
+}
+
+.footer .mex_image{
+	height: 15px;
+}
+
+.footer .images{
+	text-align: right;
+}
+
+.footer .images img{
+	height: 25px;
+	padding-left: 15px;
+	padding-bottom: 5px;
+	padding-top: 2px;
+}
+
+
+/*MEDIA QUERIES*/
+
+@media screen and (max-width: 989px){
+
+}
+
+

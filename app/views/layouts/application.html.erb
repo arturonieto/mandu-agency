@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>PortfolioMandu</title>
+    <%= csrf_meta_tags %>
+    <link href="https://fonts.googleapis.com/css?family=Arimo|Droid+Sans|Droid+Sans+Mono|Hind|Hind+Siliguri|Josefin+Sans|Muli|Open+Sans|Open+Sans+Condensed:300|Poppins|Raleway:200,300,400|Roboto" rel="stylesheet">
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+
+  	<div class="header">
+  		<div class="container">
+  			<div class="nav_bar">
+  				<div class="row">
+  					<div class="col-md-5 col-xs-5">
+  						<%= link_to (root_path) do %>
+  							<h1 style="font-size: 2.2em;">MANDU</h1>
+  							<%= image_tag('logo-pagina-4-1.png')%>
+  						<% end %>
+  					</div>
+  					<div class="col-md-7 col-xs-7">
+  						<ul class="pull-right">
+  							<%= link_to ({controller: 'pages', action: 'index', link: :portafolio}) do %><li class="portafolio">PORTAFOLIO</li><% end %>
+  							<%= link_to ({controller: 'pages', action: 'nosotros', link: :nosotros}) do %><li class="nosotros">NOSOTROS</li><% end %>
+  							<%= link_to ({controller: 'pages', action: 'contacto', link: :contacto}) do %><li class="contacto">CONTACTO</li><% end %>
+  						</ul>
+  					</div>
+  				</div>
+  			</div>
+  		</div>
+  	</div>
+
+    <%= yield %>
+
+    <!--<div class="footer">
+    	<div class="container">
+    		<div class="row">
+    			<div class="col-md-6">
+    				<%= image_tag(('mexico.png'), :class => 'mex_image') %> México 2017 &reg; Mandu Agency S.A. de C.V.
+    			</div>
+    			<div class="col-md-6">
+    				<div class="images">
+    					<%= image_tag('001-social-2.png') %>
+    					<%= image_tag('002-social-1.png') %>
+    					<%= image_tag('003-social.png') %>
+    					<%= image_tag('004-social-3.png') %>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+    </div>-->
+
+    <script>
+
+	var getUrlParameter = function getUrlParameter(sParam) {
+          var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+          sURLVariables = sPageURL.split('&'),
+          sParameterName,
+          i;
+
+        for (i = 0; i < sURLVariables.length; i++) {
+          sParameterName = sURLVariables[i].split('=');
+
+          if (sParameterName[0] === sParam) {
+            return sParameterName[1] === undefined ? true : sParameterName[1];
+          }
+        }
+      };
+	
+	var page = getUrlParameter('link');
+
+	if (page){
+		$('.header .nav_bar h1').css('display', 'none');
+		$('.header .nav_bar img').css('display', 'block');
+	}
+
+	switch(page){
+		case 'portafolio':
+			$('.header .nav_bar ul a li.portafolio').addClass('active');
+		break;
+		case 'nosotros':
+			$('.header .nav_bar ul a li.nosotros').addClass('active');
+		break;
+		case 'contacto':
+			$('.header .nav_bar ul a li.contacto').addClass('active');
+		break;
+	}
+
+  var typ = getUrlParameter('type');
+
+  switch(typ){
+    case 'interior':
+      $('.show a.interior').addClass('active');
+    break;
+    case 'exterior':
+      $('.show a.exterior').addClass('active');
+    break;
+    case 'foto':
+      $('.show a.foto').addClass('active');
+    break;
+    case 'industrial':
+      $('.show a.industrial').addClass('active');
+    break;
+  }
+
+
+	</script>
+
+  </body>
+</html>

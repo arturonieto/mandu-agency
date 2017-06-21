@@ -1,0 +1,35 @@
+<div class="portfolio">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 interior">
+       <%= image_tag('renders/interiores/11.jpg') %>
+       <div class="img_description"><p>INTERIORES</p>
+        <%= link_to 'VER MÁS', {controller: 'pages', action: 'see', link: :portafolio, type: :interior}, :class => 'explorar'%>
+        </div>
+      </div>
+      <div class="col-md-6 exterior">
+        <%= image_tag('renders/exteriores/5.jpg') %>
+        <div class="img_description"><p>EXTERIORES</p>
+        <%= link_to 'VER MÁS', {controller: 'pages', action: 'see', link: :portafolio, type: :exterior}, :class => 'explorar'%>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 fotografia">
+        <%= image_tag('renders/foto/2.jpg') %>
+        <div class="img_description"><p>FOTOGRAFÍA</p>
+        <%= link_to 'VER MÁS', {controller: 'pages', action: 'see', link: :portafolio, type: :foto}, :class => 'explorar'%>
+        </div>
+      </div>
+      <div class="col-md-6 diseño_industrial">
+        <%= image_tag('renders/producto/2.jpg') %>
+        <div class="img_description"><p>DISEÑO INDUSTRIAL</p>
+        <%= link_to 'VER MÁS', {controller: 'pages', action: 'see', link: :portafolio, type: :industrial}, :class => 'explorar'%>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+

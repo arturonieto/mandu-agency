@@ -1,0 +1,49 @@
+<div class="show">
+	<div class="container">
+		<% @render.each_slice(2) do |renders| %>
+			<div class="row">
+				<% renders.each do |r| %>
+					<% if @type == 'exterior' then %>			
+						<%= link_to render_path(r, link: :portafolio, type: :exterior) do %>
+							<div class="col-md-6" align="center" style="margin-bottom: 5em; border-radius: 5px;">
+								<%= image_tag(r.image) %> 				
+							</div>
+						<% end %>
+					<% elsif @type == 'interior' then %>
+						<%= link_to render_path(r, link: :portafolio, type: :interior) do %>
+							<div class="col-md-6" align="center" style="margin-bottom: 5em; border-radius: 5px;">
+								<%= image_tag(r.image) %> 				
+							</div>
+						<% end %>
+					<% elsif @type == 'foto' then %>
+						<%= link_to render_path(r, link: :portafolio, type: :foto) do %>
+							<div class="col-md-6" align="center" style="margin-bottom: 5em; border-radius: 5px;">
+								<%= image_tag(r.image) %> 				
+							</div>
+						<% end %>
+					<% elsif @type == 'industrial' then %>
+						<%= link_to render_path(r, link: :portafolio, type: :industrial) do %>
+							<div class="col-md-6" align="center" style="margin-bottom: 5em; border-radius: 5px;">
+								<%= image_tag(r.image) %> 				
+							</div>
+						<% end %>
+					<% end %>
+				<% end %>			
+			</div>
+		<% end %>
+		<div class="row">
+			<div class="col-md-3 col-xs-3">
+				 <%= link_to 'EXTERIORES', {controller: 'pages', action: 'see', link: :portafolio, type: :exterior}, :class => 'exterior'%>
+			</div>
+			<div class="col-md-3 col-xs-3">
+				 <%= link_to 'INTERIORES', {controller: 'pages', action: 'see', link: :portafolio, type: :interior}, :class => 'interior'%>
+			</div>
+			<div class="col-md-3 col-xs-3">
+				 <%= link_to 'FOTOGRAFÍA', {controller: 'pages', action: 'see', link: :portafolio, type: :foto}, :class => 'foto'%>
+			</div>
+			<div class="col-md-3 col-xs-3">
+				 <%= link_to 'INDUSTRIAL', {controller: 'pages', action: 'see', link: :portafolio, type: :industrial}, :class => 'industrial'%>
+			</div>
+		</div>
+	</div>
+</div>
