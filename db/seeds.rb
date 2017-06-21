@@ -36,11 +36,11 @@ Render.create(typ: 'foto', image: 'renders/foto/1.jpg')
 Render.create(typ: 'foto', image: 'renders/foto/2.jpg')
 Render.create(typ: 'foto', image: 'renders/foto/3.jpg')
 Render.create(typ: 'foto', image: 'renders/foto/4.jpg')
+Render.create(typ: 'foto', image: 'renders/foto/5.jpg')
 Render.create(typ: 'foto', image: 'renders/foto/6.jpg')
 Render.create(typ: 'foto', image: 'renders/foto/7.jpg')
 Render.create(typ: 'foto', image: 'renders/foto/8.jpg')
 Render.create(typ: 'foto', image: 'renders/foto/9.jpg')
-Render.create(typ: 'foto', image: 'renders/foto/10.jpg')
 
 
 Render.create(typ: 'industrial', image: 'renders/producto/1.jpg')
