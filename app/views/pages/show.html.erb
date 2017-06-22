@@ -1,6 +1,9 @@
 <div class="render">
-	<div class="container">
+	<div class="jumbotron">
 		<%= image_tag(@render.image) %>
+	</div>
+	<div class="container">
+		
 		<% if @type == 'exterior' %>
 		<%= link_to 'REGRESAR', {controller: 'pages', action: 'see', link: :portafolio, type: :exterior} %>
 		<% elsif @type == 'interior' %>

@@ -32,8 +32,16 @@ p, li, h1, h3, h2, h4, a{
 
 /*HEADER*/
 
+.header{
+	z-index: 1000;
+}
+
 .header .nav_bar a{
 	text-decoration: none;
+}
+
+.header .nav_bar h1{
+	display: none;
 }
 
 .header .nav_bar img{
@@ -42,7 +50,7 @@ p, li, h1, h3, h2, h4, a{
 	margin: 0;
 	margin-top: .8em;
 	padding: 0;
-	display: none;
+	display: block;
 }
 
 .header .nav_bar ul li{

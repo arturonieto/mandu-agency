@@ -4,25 +4,102 @@
 
 
 .main{
+
+	.cb-slideshow, .cb-slideshow:after{
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		top: 68px;
+		left: 0px;
+		z-index: 0;
+	}
+
+	.cb-slideshow:after{
+		content: '';
+		
+	} 
+
+	.cb-slideshow li span{
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		color: transparent;
+		background-size: cover;
+		background-position: 50% 50%;
+		background-repeat: none;
+		opacity: 0;
+		z-index: 0;
+		animation: imageAnimation 24s linear infinite 0s;
+	}
+
+	.cb-slideshow li:nth-child(1) span{
+		background-image: url('renders/interiores/1.jpg');
+	}
+
+	.cb-slideshow li:nth-child(2) span{
+		background-image: url('renders/interiores/6.jpg');
+		animation-delay: 6s;
+	}
+
+	.cb-slideshow li:nth-child(3) span{
+		background-image: url('renders/exteriores/3.jpg');
+		animation-delay: 12s;
+	}
+
+	.cb-slideshow li:nth-child(4) span{
+		background-image: url('renders/producto/3.jpg');
+		animation-delay: 18s;
+	}
+
+	@keyframes imageAnimation { 
+	0% {
+	    opacity: 0;
+	    animation-timing-function: ease-in;
+	}
+	8% {
+	    opacity: 1;
+	    
+	    animation-timing-function: ease-out;
+	}
+	17% {
+	    opacity: 1;
+	    
+	}
+	35% {
+	    opacity: 0;
+	    
+	}
+	100% { opacity: 0 }
+	}
+
 	.container{
 		margin-top: 3em;
+		z-index: 1000;
+		position: absolute;
+		top: 20%;
+		right: 10%;
 		.col-md-12{
-			text-align: center;
-			margin-top: 5em;
+			text-align: right;
+			
 			h1{
-				margin-bottom: 1em;
+				span{
+					background-color: black;
+				}
 			}
 			a{
 				font-size: 1.5em;
-				color: dodgerblue;
+				color: black;
 				text-decoration: none;
-				border: 1px solid dodgerblue;
+				margin-top: 10px;
+				background-color: dodgerblue;
 				padding: 10px 45px;
 				transition: 1s ease-out;
 				&:hover{
 					transition: 1s ease-out;
-					background-color: dodgerblue;
-					color: black;
+					background-color: black;
+					color: white;
 				}
 			}
 		}
@@ -100,14 +177,20 @@
 }
 
 .render{
-	.container{
-		margin-top: 1em;
-		margin-bottom: 4em;
+	.jumbotron{
+		background-color: transparent;
+		margin: 0;
+		padding: 0;
 		img{
+			margin-top: .5em;	
 			width: 100%;
 			height: auto;
 		 	margin-bottom: 1em;
-		}
+		 }
+	}
+	.container{
+		margin-top: 1em;
+		margin-bottom: 4em;		
 		a{
 			margin-top: 3em;
 			text-decoration: none;
@@ -216,10 +299,22 @@
 
 
 .contacto{
+	.jumbotron{
+		background-color: transparent;
+		background: url('logo-contacto.jpg') no-repeat center center;
+		background-size: cover;
+		padding: 0;
+		margin: 0;
+		padding-bottom: 3em;
+		padding-top: 2em;
+		span{
+
+		}
+	}
 	.container{
-		margin-top: 2em;
+		margin-top: 1em;
 		.col-md-7.col-xs-7{
-			border-right: 1px solid white;
+			
 		}
 		.form{
 			max-width: 500px;
@@ -260,6 +355,14 @@
 		}
 		.col-md-5.col-xs-5{
 			text-align: center;
+			div{
+				background-color: rgba(0,0,0,.4);
+				border-radius: 10px;
+				margin: 0 auto;
+				padding: 0;
+				
+
+			}
 			h3{
 				padding: 20px 0;
 			}
