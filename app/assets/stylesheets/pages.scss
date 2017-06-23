@@ -327,6 +327,8 @@
 					width: 100%;
 					border-radius: 5px;
 					border: 0px;
+					background-color: rgba(0,0,0,.5);
+					color: white;
 				}
 				textarea{
 					width: 100%;
@@ -334,6 +336,9 @@
 					border-radius: 5px;
 					padding-left: 3px;
 					padding-top: 2px;
+					background-color: rgba(0,0,0,.5);
+					color: white;
+					border: 0;
 				}
 				input[type="submit"]{
 					font-size: 1.2em;
@@ -356,7 +361,7 @@
 		.col-md-5.col-xs-5{
 			text-align: center;
 			div{
-				background-color: rgba(0,0,0,.4);
+				background-color: rgba(0,0,0,.5);
 				border-radius: 10px;
 				margin: 0 auto;
 				padding: 0;
