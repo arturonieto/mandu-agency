@@ -26,6 +26,8 @@
   							<%= link_to ({controller: 'pages', action: 'index', link: :portafolio}) do %><li class="portafolio">PORTAFOLIO</li><% end %>
   							<%= link_to ({controller: 'pages', action: 'nosotros', link: :nosotros}) do %><li class="nosotros">NOSOTROS</li><% end %>
   							<%= link_to ({controller: 'pages', action: 'contacto', link: :contacto}) do %><li class="contacto">CONTACTO</li><% end %>
+                <%= link_to "https://www.instagram.com/mandumx/", target: :_blank do %><li class="social"><%= image_tag('003-social.png') %></li><% end %>
+                <%= link_to "https://www.facebook.com/mandumx/", target: :_blank do %><li class="social"><%= image_tag('004-social-3.png') %></li><% end %>                
   						</ul>
   					</div>
   				</div>
@@ -35,23 +37,8 @@
 
     <%= yield %>
 
-    <!--<div class="footer">
-    	<div class="container">
-    		<div class="row">
-    			<div class="col-md-6">
-    				<%= image_tag(('mexico.png'), :class => 'mex_image') %> México 2017 &reg; Mandu Agency S.A. de C.V.
-    			</div>
-    			<div class="col-md-6">
-    				<div class="images">
-    					<%= image_tag('001-social-2.png') %>
-    					<%= image_tag('002-social-1.png') %>
-    					<%= image_tag('003-social.png') %>
-    					<%= image_tag('004-social-3.png') %>
-    				</div>
-    			</div>
-    		</div>
-    	</div>
-    </div>-->
+
+    
 
     <script>
 

@@ -61,6 +61,17 @@ p, li, h1, h3, h2, h4, a{
 	padding: 1.5em 0 0 15px;
 }
 
+.header .nav_bar ul li.social{
+	padding: 0 0 0 15px;
+	margin-top: 0px;
+}
+
+.header .nav_bar ul li img{
+	display: block;
+	width: 15px;
+	height: auto;
+}
+
 .header .nav_bar ul a li.active{
 	color: dodgerblue;
 }
